@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Shopnow</title>
+<link rel="stylesheet" type="text/css" href="homepageStyle.css">
+<style>
+.dashain{
+  width:auto;
+  height:600px;
+  position: relative;
+  animation: myfirst 1s linear 1s infinite alternate;
+}
+@keyframes myfirst {
+  0%   {background-color:pink;}
+  10%  {background-color:yellow;}
+  20%  {background-color:orange;}
+  30%  {background-color:blue;}
+  40% {background-color:purple;}
+  50% {background-color:red;}
+  60% {background-color:grey;}
+  70% {background-color:white;}
+  80% {background-color:cyan;}
+  90% {background-color:orange;}
+  100% {background-color:red;}
+}
+* {box-sizing: border-box;}
+body {font-family: arial, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin:auto;
+}
+.active {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .8} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .8} 
+  to {opacity: 1}
+}
+
+
+
+</style>
+</head>
+<body>
+    <div class="upper">
+    <ul class="up">
+    <li><a href ="loginSignup.html">Login&Signup</a></li>
+    <li><a href ="ContactUs.html">ContactUs</a></li>
+    <li><a href ="aboutus.html">AboutUs</a></li>
+  </ul>
+    <a href="Shopnow.html"><img src="shopnow.png" altr="brand pic" width="140px" height="35px"></a>
+    <div class="search">
+    <form>
+      <input type="text" placeholder="Input text you want to search..." name="search">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+  </div>
+  <div class="categories">
+      <ul>
+        <li><strong>Categories</strong>
+          <ul>
+            <li>Electronics
+              <ul>
+                <li>laptops
+                  <ul>
+                    <a href = "lenovo.html"><li>Lenovo</li></a>
+                    <a href="dell.html"><li>Dell</li></a>
+                    <li>Acer</li>
+                    <li>Apple</li>
+                    <li>HP</li>
+                  </ul>
+                </li>
+                <li>Desktops</li>
+                <li>Mobile</li>
+                <li>Speakes</li>
+                <li>LED/LCD</li>
+                <li>Gaming Consoles</li>
+                <li>Cameras</li>
+                <li>Printers</li>
+              </ul>
+            <li>Cosmetics
+                <ul>
+                  <li>BB Cream</li>
+                  <li>Ponds White Beauty</li>
+                  <li>Garnier suns cream</li>
+                  <li>Acene Face wash</li>
+                  <li>Livon hair Oil</li>
+                  <li>Head & Shoulder condisner</li>
+                </ul>
+            </li>
+            <li>Health & Beauty
+                <ul>
+                  <li>Bath & Body</li>
+                  <li>Body & Massage Oils</li>
+                  <li>Body Moisturizers</li>
+                  <li>Foot Care</li>
+                  <li>Body Scrubs</li>
+                  <li>Fragrances</li>
+                </ul>
+            </li>
+            <li>Groceries & Pets</li>
+            <li>Womes's Fashion</li>
+            <li>Men's Fashion</li>
+            <li>Sports & Outdoor</li>
+            <li>Automotive & Moterbike</li>
+            <li>TV & Home appliances</li>
+            </ul>
+          </li>
+          </ul>
+      </div>
+</div>
+<hr>
+<div class="dashain">
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="hotsales/dashain.jpg" style="width:100%" height="600px">
+</div>
+
+<div class="mySlides fade">
+  <img src="hotsales/shoes1.jpg" style="width:100%" height="600px">
+</div>
+<div class="mySlides fade">
+  <img src="hotsales/shoes2.jpg" style="width:100%" height="600px">
+</div>
+
+<div class="mySlides fade">
+  <img src="hotsales/jeans1.jpg" style="width:100%" height="600px">
+</div>
+<div class="mySlides fade">
+  <img src="hotsales/watch1.jpg" style="width:100%" height="600px">
+</div>
+<div class="mySlides fade">
+  <img src="hotsales/laptop1.jpg" style="width:100%" height="600px">
+</div>
+<div class="mySlides fade">
+  <img src="hotsales/garnier1.jpg" style="width:100%" height="600px">
+</div>
+<div class="mySlides fade">
+  <img src="hotsales/cooler1.jpg" style="width:100%" height="600px">
+</div>
+<div class="mySlides fade">
+  <img src="hotsales/cosmetics1.jpg" style="width:100%" height="600px">
+</div>
+</div>
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 4000);
+}
+</script>
+
+  <div class="teej">
+    <h3>Teej Special</h3>
+<div class="body">
+  <ul>
+    <a href="teej1.html"><li><img src="teej/teej1.jpg" width="150px" height="200px"><h4>Red Banarasi Saree</h4><h5>100%Cotton</h5><p>price:15,000(inc. 25% off)</p></li></a>
+    <li><img src="teej/teej2.jpg" width="150px" height="200px"><h4>Red Siffon Saree</h4><h5>10%Cotton</h5><p>price:20,000(inc. 30% off)</p></li>
+    <li><img src="teej/teej3.jpg" width="150px" height="200px"><h4>Red Cotton Saree</h4><h5>100%Cotton</h5><p>price:30,000(inc. 20% off)</p></li>
+    <li><img src="teej/teej4.jpg" width="150px" height="200px"><h4>Red Banarasi Saree</h4><h5>30%Cotton</h5><p>price:50,000(inc. 10% off)</p></li>
+    <li><img src="teej/teej5.jpg" width="150px" height="200px"><h4>Silk Saree</h4><h5>10%Cotton</h5><p>price:40,000(inc. 15% off)</p></li>
+    <li><img src="teej/teej6.jpg" width="150px" height="200px"><h4>Red Kanjeevaram Saree</h4><h5>80%Cotton</h5><p>price:1,00,000(inc. 12% off)</p></li>
+    <li><img src="teej/teej8.jpg" width="150px" height="200px"><h4> Silver palted RedNecklace</h4><h5>100% Pure</h5><p>price:20,000(inc. 7% off)</p></li>
+    <li><img src="teej/teej9.jpg" width="150px" height="200px"><h4>Red Bead</h4><h5>Original Gems</h5><p>price:30,000(inc. 5% off)</p></li>
+    <li><img src="teej/teej10.jpg" width="150px" height="200px"><h4>Red Bead</h4><h5>100% Original</h5><p>price:15,000(inc. 20% off)</p></li>
+    <li><img src="teej/teej12.jpg" width="150px" height="200px"><h4>Green Bead</h4><h5>MDIN India</h5><p>price:5,000(inc. 3% off)</p></li>
+    <li><img src="teej/teej13.jpg" width="150px" height="200px"><h4>Green Bead</h4><h5>MDIN USA</h5><p>price:50,000(inc. 5% off)</p></li>
+    <li><img src="teej/teej14.jpg" width="150px" height="200px"><h4>Green Bead</h4><h5>MDIN GERMANY</h5><p>price:30,000(inc. 10% off)</p></li>
+    <li><img src="teej/teej15.jpg" width="150px" height="200px"><h4>Green Bead</h4><h5>Pure Gems with gold plated</h5><p>price:1,80,000(inc. 5% off)</p></li>
+    </ul>
+    </div>
+    </div>
+  <div class="foryou">
+  	<h3>Your's interest</h3>
+  <ul>
+  	<a href="lenovo720s.html"><li><img src="foryou/foryou1.jpg" width="200px" height="180px"><h4>lenovo 720s 14IKB</h4><h5>(256/8/i58thgen)</h5><p>price:90,000(inc. 5% off)</p></li></a>
+  	<li><img src="foryou/foryou2.jpg" width="200px" height="180px"><h4>Transcend Hard Drive</h4><h5>Rev 8000RPM</h5><p>price:7,000(inc. 8% off)</p></li>
+  	<li><img src="foryou/foryou3.jpg" width="200px" height="180px"><h4>Acer swift 3</h4><h5>(256/8/i5 8th gen)</h5><p>price:87,000(inc. 7% off)</p></li> 
+  	<li><img src="foryou/foryou4.jpg" width="200px" height="180px"><h4>Iphone X</h4><h5>(256/3GBRAM)</h5><p>price:1,40,000(inc. 15% off)</p></li>
+  	<li><img src="foryou/foryou5.jpg" width="200px" height="180px"><h4>DELLG5</h4><h5>(126+1TB/I78250U/GForce1060)</h5><p>price:1,10,000(inc. 17% off)</p></li>
+  	<li><img src="foryou/foryou6.jpg" width="200px" height="180px"><h4>lenovo Legion Y720</h4><h5>(126+1TB/I78250U/GForce1050)</h5><p>price:1,00,000(inc. 5% off)</p></li>
+  	<li><img src="foryou/foryou7.jpg" width="200px" height="180px"><h4>DELL XPS 13</h4><h5>(126+1TB/I78250U/GForce1060)</h5><p>price:1,50,000(inc. 7% off)</p></li>
+  	<li><img src="foryou/foryou8.jpg" width="200px" height="180px"><h4>JBL</h4><h5> Speakers</h5><p>price:8,000(inc. 5% off)</p></li>
+  	<li><img src="foryou/foryou9.jpg" width="200px" height="180px"><h4>PURPOSE Tour</h4><h5>Hoddies(MDIN USA)</h5><p>price:10,000(inc. 10% off)</p></li>
+  	<li><img src="foryou/foryou10.jpg" width="200px" height="180px"><h4>DENIM<h4><h5>jeans pants</h5><p>price:5,000(inc. 10% off)</p></li>
+
+  	</div>
+  <div class="bot">   
+    <ul class="left">
+      <h3>Customer Care</h3> 
+      <li>Help Desk</li>
+      <li>How to Buy</li>
+      <li>Track Our Order</li>
+      <li>Returns and Refunds</li>
+      <li>Contack Us</li>
+    </ul>
+    <ul class="middle">
+      <h3>Shopnow</h3> 
+      <li>About Us</li>
+      <li>Careers</li>
+      <li>Shopnow Cares</li>
+      <li>Shopnow Blog</li>
+      <li>Digital Payment</li>
+    </ul>   
+    <ul class="right">
+      <h3>Available On</h3>
+      <li><img src="google.png" width="200px" height="60px"> </li>
+      <li><img src="apple.jpg" width="200px" height="60px"> </li>
+    </ul>
+   <div class="barcode">
+    <img src="barcode.jpg" width="200px" height="200px" style="margin-top:25px"> 
+  </div>
+  </div>
+<p id="copy">&#169Shopnow 2019</p>
+</body>
+</html>

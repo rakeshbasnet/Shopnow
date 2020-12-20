@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Description</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+
+
+ .btn {
+  background-color: rgb(25,25,112);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+ .btn:hover{
+  opacity: 1;
+ }
+
+ #formcontent {
+  width:800px;
+  height:600px;
+  margin-top: 60px;
+  margin-left:220px;
+  display:block;
+  box-shadow: 2px 2px 15px grey;
+  background-color:white;
+}
+
+#formcontent input{
+  width:300px;
+  height:60px;
+  margin:15px 20px 20px 220px;
+}
+
+#formcontent input:hover{
+  background-color:rgb(212,212,212);
+  }
+
+#formcontent span{
+  margin-left:60px;
+}
+
+#method{
+  display:inline-block;
+}
+
+#method img{
+  padding:1px;
+  box-shadow: 2px 2px 15px grey;
+  opacity:0.8;
+}
+
+#method img:hover{
+  background-color:rgb(25,25,112);
+  opacity:1;
+
+}
+
+.paybtn{
+  margin-left:40px
+}
+
+#thanku{
+  position:absolute;
+  z-index:1;
+  height:360px;
+  width:400px;
+  margin-top:-45%;
+  margin-left:30%;
+  background-color:white;
+  display:none;
+  border-radius: 50px 20px;
+}
+
+#esewabar{
+  position:absolute;
+  z-index:1;
+  height:420px;
+  width:420px;
+  margin-top:-45%;
+  margin-left:30%;
+  background-color:white;
+  display:none;
+  border-radius: 50px 20px;
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+   function valid(id){
+    var mobile= document.getElementById('mobile').value;
+    var address= document.getElementById('address').value;
+    var form1= document.getElementById('form1').value;
+
+      if(mobile== ""){
+      document.getElementById("mob").innerHTML="** please enter mobilenumber";
+      return false;  
+    }
+    
+    if(isNaN(mobile)){
+      document.getElementById("mob").innerHTML="**mobile number must be digits";
+      return false;
+    }
+    if(mobile.length!=10){
+      document.getElementById("mob").innerHTML="**Mobile number must be of 10 digits";
+      return false;
+    }
+    else{
+      document.getElementById("mob").innerHTML="";
+    }
+
+     if(address== ""){
+        document.getElementById("add").innerHTML= "**please insert your address";
+        return false;
+      }
+     if(address.length<=8){
+      document.getElementById("add").innerHTML="**please enter the full address";
+      return false;
+      }
+      else{
+      document.getElementById("add").innerHTML="";
+    }
+
+    if(id == "cash"){
+        thanku();
+     }
+
+    if(id == "esewa"){
+        esewabar();
+    }
+
+  }
+
+  function thanku(){
+    document.getElementById('thanku').style.display="block";
+    document.getElementById('esewabar').style.display="none";
+    document.getElementById('formcontent').style.opacity="0"; 
+    setTimeout("document.getElementById('form1').submit()", 3000); 
+
+  }
+
+   function esewabar(){
+    document.getElementById('esewabar').style.display="block";
+    document.getElementById('formcontent').style.opacity="0";
+
+  }
+
+
+</script>
+
+</head>
+<body id="all" style="background-color: rgb(25,25,112,0.4)">
+    <div class="upper">
+    <ul class="up">
+    <li><a href ="loginSignup.html">Login&Signup</a></li>
+    <li><a href ="ContactUs.html">ContactUs</a></li>
+    <li><a href ="aboutus.html">AboutUs</a></li>
+  </ul>
+    <a href="Shopnow.html"><img src="shopnow.png" altr="brand pic" width="140px" height="35px"></a>
+    <div class="search">
+    <form>
+      <input type="text" placeholder="Input text you want to search..." name="search" autocomplete="off">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+  </div>
+  <div class="categories">
+      <ul>
+        <li><strong>Categories</strong>
+          <ul>
+            <li>Electronics
+              <ul>
+                <li>laptops
+                  <ul>
+                    <a href = "lenovo.html"><li>Lenovo</li></a>
+                    <a href="dell.html"><li>Dell</li></a>
+                    <li>Acer</li>
+                    <li>Apple</li>
+                    <li>HP</li>
+                  </ul>
+                </li>
+                <li>Desktops</li>
+                <li>Mobile</li>
+                <li>Speakes</li>
+                <li>LED/LCD</li>
+                <li>Gaming Consoles</li>
+                <li>Cameras</li>
+                <li>Printers</li>
+              </ul>
+            <li>Cosmetics
+                <ul>
+                  <li>BB Cream</li>
+                  <li>Ponds White Beauty</li>
+                  <li>Garnier suns cream</li>
+                  <li>Acene Face wash</li>
+                  <li>Livon hair Oil</li>
+                  <li>Head & Shoulder condisner</li>
+                </ul>
+            </li>
+            <li>Health & Beauty
+                <ul>
+                  <li>Bath & Body</li>
+                  <li>Body & Massage Oils</li>
+                  <li>Body Moisturizers</li>
+                  <li>Foot Care</li>
+                  <li>Body Scrubs</li>
+                  <li>Fragrances</li>
+                </ul>
+            </li>
+            <li>Groceries & Pets</li>
+            <li>Womes's Fashion</li>
+            <li>Men's Fashion</li>
+            <li>Sports & Outdoor</li>
+            <li>Automotive & Moterbike</li>
+            <li>TV & Home appliances</li>
+            </ul>
+          </li>
+          </ul>
+      </div>
+</div>
+<hr>
+
+<div id="formcontent">
+    <form action="/database.php" method="post"  name="form1" id="form1">
+    <br><br>
+    <label style="margin-left:220px;"><b>Current Mobile Number:</b></label><br>
+    <input type="text" id="mobile" autocomplete="off" placeholder="Number you want to make contact" autofocus=""><br>
+    <span style="margin-left:220px; color:red" id="mob" style="color:red"></span>
+    <br><br>
+    <label style="margin-left:220px;"><b>Current Address:</b></label><br>
+    <input type="text" id="address" autocomplete="off" placeholder="Address you want to receive"><br>
+    <span style="margin-left:220px; color:red" id="add"></span>
+    <br><br>
+
+<div id="method">
+  <center>
+  <h2>Payment Methods</h2></center>
+  <button type="button" onclick="valid(this.id)" id="esewa" class="paybtn"><img src="esewa.png" width="200px" height="150px"/></button>
+  <img src="khalti.jpg" width="200px" height="150px" class="paybtn"/>
+  <button type="button" onclick="valid(this.id)" id="cash" class="paybtn"><img src="Cash.jpg" width="200px" height="150px"/></button>
+  </center>
+</div>
+  </form>
+</div>
+
+<div id="thanku">
+  <center>
+  <h2>Thanks For Choosing Us</h2>
+  <img src="thank.png" width="180px" height="200px"/>
+  <h3>We will contact you</h3>
+  </center>
+</div>
+
+<div id="esewabar">
+  <center>
+  <h2>Scan this code in eSewa app</h2>
+  <img src="esewabar.jpg" width="250px" height="250px"/><br><br>
+  <button class="btn" onclick="thanku()">Done</button>
+  </center>
+</div>
+
+  <!--<div class="bot" style="clear:both; margin-top:600px;">   
+    <ul class="left">
+      <h3>Customer Care</h3> 
+      <li>Help Desk</li>
+      <li>How to Buy</li>
+      <li>Track Our Order</li>
+      <li>Returns and Refunds</li>
+      <li>Contack Us</li>
+    </ul>
+    <ul class="middle">
+      <h3>Shopnow</h3> 
+      <li>About Us</li>
+      <li>Careers</li>
+      <li>Shopnow Cares</li>
+      <li>Shopnow Blog</li>
+      <li>Digital Payment</li>
+    </ul>   
+    <ul class="right">
+      <h3>Available On</h3>
+      <li><img src="google.png" width="200px" height="60px"> </li>
+      <li><img src="apple.jpg" width="200px" height="60px"> </li>
+    </ul>
+   <div class="barcode">
+    <img src="barcode.jpg" width="200px" height="200px" style="margin-top:25px"> 
+  </div>
+  </div>
+<p id="copy">&#169Shopnow 2019</p>-->
+</body>
+</html>

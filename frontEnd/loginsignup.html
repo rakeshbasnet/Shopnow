@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Shopnow</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<style>
+body{
+background-image: url("logbac.jpg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+.formcontent{
+  width:400px;
+  height:auto;
+  margin-left:400px;
+  margin-top:60px;
+  padding:5px;
+  color:rgb(25,25,112);
+  border:1px solid blue;
+  background-color: white;
+}
+.formcontent input{
+  width:300px;
+  height:60px;
+  margin:15px 20px 20px 40px;
+}
+.formcontent input:hover{
+  background-color:rgb(212,212,212);
+  }
+.formcontent span{
+  margin-left:40px;
+}
+.formcontent1{
+  width:400px;
+  height:auto;
+  margin-left:400px;
+  margin-top:180px;
+  padding:5px;
+  color:rgb(25,25,112);
+  border:1px solid blue;
+  background-color: white;
+}
+.formcontent1 input{
+  width:300px;
+  height:60px;
+  margin:15px 20px 20px 40px;
+}
+.formcontent1 input:hover{
+  background-color:rgb(212,212,212);
+  }
+.formcontent1 .radio{
+  height:25px;
+  display:block;
+  margin-top:-20px;
+}
+.formcontent1 span{
+  margin-left:40px;
+}
+</style>
+</head>
+<body>
+    <div class="upper">
+    <ul class="up">
+    <li><a href ="loginSignup.html">Login&Signup</a></li>
+    <li><a href ="ContactUs.html">ContactUs</a></li>
+    <li><a href ="aboutus.html">AboutUs</a></li>
+  </ul>
+    <a href="Shopnow.html"><img src="shopnow.png" altr="brand pic" width="140px" height="35px"></a>
+    <div class="search">
+    <form>
+      <input type="text" placeholder="Input text you want to search..." name="search">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+  </div>
+  <div class="categories">
+      <ul>
+        <li><strong>Categories</strong>
+          <ul>
+            <li>Electronics
+              <ul>
+                <li>laptops
+                  <ul>
+                    <a href = "lenovo.html"><li>Lenovo</li></a>
+                    <a href="dell.html"><li>Dell</li></a>
+                    <li>Acer</li>
+                    <li>Apple</li>
+                    <li>HP</li>
+                  </ul>
+                </li>
+                <li>Desktops</li>
+                <li>Mobile</li>
+                <li>Speakes</li>
+                <li>LED/LCD</li>
+                <li>Gaming Consoles</li>
+                <li>Cameras</li>
+                <li>Printers</li>
+              </ul>
+            <li>Cosmetics
+                <ul>
+                  <li>BB Cream</li>
+                  <li>Ponds White Beauty</li>
+                  <li>Garnier suns cream</li>
+                  <li>Acene Face wash</li>
+                  <li>Livon hair Oil</li>
+                  <li>Head & Shoulder condisner</li>
+                </ul>
+            </li>
+            <li>Health & Beauty
+                <ul>
+                  <li>Bath & Body</li>
+                  <li>Body & Massage Oils</li>
+                  <li>Body Moisturizers</li>
+                  <li>Foot Care</li>
+                  <li>Body Scrubs</li>
+                  <li>Fragrances</li>
+                </ul>
+            </li>
+            <li>Groceries & Pets</li>
+            <li>Womes's Fashion</li>
+            <li>Men's Fashion</li>
+            <li>Sports & Outdoor</li>
+            <li>Automotive & Moterbike</li>
+            <li>TV & Home appliances</li>
+            </ul>
+          </li>
+          </ul>
+      </div>
+</div>
+<hr>
+<div class="formcontent">
+  <img src="logimg.png" width="100px" height="100px" style="margin-left:140px; margin-top:10px">
+  <h3 style="margin-left:80px">New register? <a href="#new">Click here<a></h3>
+  <form action="#" method="post" onsubmit="return validation()">
+  <br>
+    <input type="text" name="mobilenumber" id="mobil" autocomplete="off" placeholder="Mobile Number" autofocus=""><br>
+    <span id="mobilnumber" style="color:red"></span>
+    <br>
+    <input type="password" name="password" id="pas" autocomplete="off" placeholder="Password"><br>
+    <span id="pasword" style="color:red"></span>
+    <br>
+    <input type="Submit" name="submit" value="Log In" style="background-color:rgb(25,25,112); color:white ;font-size:20px">
+  </form>
+</div>
+<div id="new" class="formcontent1">
+      <img src="logimg.png" width="100px" height="100px" style="margin-left:140px; margin-top:10px">
+    <h3 style="margin-left:30px"> You are requested to enter valid data</h3>
+ <form action="#" method="post" onsubmit="return validation1()">
+  <input type="text" name="username" id="user" autocomplete="off" placeholder="Username"><br>
+    <span id="username" style="color:red"></span>
+    <br>
+    
+    <input type="text" name="mobilenumber" id="mobile" autocomplete="off" placeholder="Mobile Number"><br>
+    <span id="mobilenumber" style="color:red"></span>
+    <br>
+   
+    <input type="text" name="temporaryaddress" id="temporary" autocomplete="off" placeholder="Temporary Address"><br>
+    <span id="temporaryaddress" style="color:red"></span>
+    <br>
+  
+    <input type="text" name="email" id="e-mail" autocomplete="off" placeholder="E-mail ID"><br>
+    <span id="email" style="color:red"></span>
+    <br>
+    
+    <input type="password" name="password" id="pass" autocomplete="off" placeholder="Password"><br>
+    <span id="password" style="color:red"></span>
+    <br>
+     
+    <input type="password" name="conpassword" id="conpass" autocomplete="off" placeholder="Confirm Password "><br>
+    <span id="conpassword" style="color:red"></span>
+    <br><br>
+    Male:
+    <input class="radio" type="radio" name="gender" value="Male" id="male">
+    Female:
+    <input class="radio" type="radio" name="gender" value="Female" id="female">
+    <br>
+    <span id="gender" style="color:red"> </span> 
+    <input type="Submit" name="submit" value="Log In" style="background-color:rgb(25,25,112); color:white ;font-size:20px"><br>
+    <input type="Submit" name="submit" value="Cancel" style="background-color:rgb(25,25,112); color:white ;font-size:20px" onclick="javascript:history.go(-1)""><br>
+
+</form>
+</div>
+  <div class="bot">   
+    <ul class="left">
+      <h3>Customer Care</h3> 
+      <li>Help Desk</li>
+      <li>How to Buy</li>
+      <li>Track Our Order</li>
+      <li>Returns and Refunds</li>
+      <li>Contack Us</li>
+    </ul>
+    <ul class="middle">
+      <h3>Shopnow</h3> 
+      <li>About Us</li>
+      <li>Careers</li>
+      <li>Shopnow Cares</li>
+      <li>Shopnow Blog</li>
+      <li>Digital Payment</li>
+    </ul>   
+    <ul class="right">
+      <h3>Available On</h3>
+      <li><img src="google.png" width="200px" height="50px"> </li>
+      <li><img src="apple.jpg" width="200px" height="50px"> </li>
+    </ul>
+   <div class="barcode">
+    <img src="barcode.jpg" width="200px" height="200px" style="margin-top:25px"> 
+  </div>
+  </div>
+<p id="copy">&#169Shopnow 2019</p>
+<script type="text/javascript">
+  function validation(){
+    var mobile=document.getElementById("mobil").value;
+    var pass=document.getElementById("pas").value;
+    
+    if(mobile== ""){
+      document.getElementById("mobilnumber").innerHTML="** please enter mobilenumber";
+      return false;  
+    }
+    
+    if(isNaN(mobile)){
+      document.getElementById("mobilnumber").innerHTML="**mobile number must be digits";
+      return false;
+    }
+    if(mobile.length!=10){
+      document.getElementById("mobilnumber").innerHTML="**Mobile number must be of 10 digits";
+      return false;
+    }
+    else{
+      document.getElementById("mobilnumber").innerHTML="";
+    }
+
+
+    if(pass== ""){
+      document.getElementById("pasword").innerHTML="**please enter the password";
+      return false;
+    }
+    if((pass.length<8) || (pass.length>20)){
+      document.getElementById("pasword").innerHTML="**password length should be in between 8 and 20 ";
+      return false;
+    }
+    else{
+      document.getElementById("pasword").innerHTML="";
+      alert('hahaa');
+      
+    }
+
+  }
+</script>
+<script type="text/javascript">
+  function validation1(){
+    var user = document.getElementById("user").value;
+    var mobile = document.getElementById("mobile").value;
+    var temporary = document.getElementById("temporary").value;
+    var email = document.getElementById("e-mail").value;
+    var pass = document.getElementById("pass").value;
+    var conpass = document.getElementById("conpass").value;
+    var male= document.getElementById("male").checked;
+    var female=document.getElementById("female").checked;
+
+      if(user== ""){
+        document.getElementById("username").innerHTML= "**please enter username";
+        return false;
+      }
+       if( (user.length <3) || (user.length >20)){
+        document.getElementById("username").innerHTML="**username length must be between 3 and 20"
+        return false;
+      }
+      if(!isNaN(user)){
+        document.getElementById("username").innerHTML="**only characters are allowed"
+        return false;
+      }
+      else{
+      document.getElementById("username").innerHTML="";
+    }
+       
+       if(mobile== ""){
+        document.getElementById("mobilenumber").innerHTML= "**please enter mobilenumber";
+        return false;
+      }
+      if(isNaN(mobile)){
+        document.getElementById("mobilenumber").innerHTML="**please enter the digits only";
+        return false;
+      }
+      if(mobile.length !=10){
+        document.getElementById("mobilenumber").innerHTML="**mobile number must be of 10 digits"
+        return false;
+      }
+      else{
+      document.getElementById("mobilenumber").innerHTML="";
+    }
+
+       if(temporary== ""){
+        document.getElementById("temporaryaddress").innerHTML= "**please insert your address";
+        return false;
+      }
+      else{
+      document.getElementById("temporaryaddress").innerHTML="";
+    }
+
+       if(email== ""){
+        document.getElementById("email").innerHTML= "**please insert emailID";
+        return false;
+      }
+      if(email.indexOf('@')<=0){
+        document.getElementById("email").innerHTML= "**invalid '@' position";
+        return false;
+      }
+      if((email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.')){
+        document.getElementById("email").innerHTML="**invalid '.' position"
+        return false;
+      }
+      else{
+      document.getElementById("email").innerHTML="";
+    }
+
+
+       if(pass== ""){
+        document.getElementById("password").innerHTML= "**please insert password";
+        return false;
+      }
+      if( (pass.length <8) || (pass.length >20)){
+        document.getElementById("password").innerHTML= "**password length must be between 8 and 20"
+        return false;
+      }
+      else{
+      document.getElementById("password").innerHTML="";
+    }
+
+      if(conpass== ""){
+        document.getElementById("conpassword").innerHTML= "**please confirm your password";
+        return false;
+      }
+      if(pass!=conpass){
+        document.getElementById("conpassword").innerHTML= "**password donot match";
+        return false;
+      } 
+      else{
+      document.getElementById("conpassword").innerHTML="";
+    } 
+
+      if((male== false) && (female== false)){
+        document.getElementById("gender").innerHTML= "**please select gender";
+        return false;
+      }
+      else{
+      document.getElementById("gender").innerHTML="";
+    }
+  }
+</script>
+</body>
+</html>
+
+ 
